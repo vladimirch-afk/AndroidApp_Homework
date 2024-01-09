@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">HW3</string>
+    <string name="empty_string"></string>
     <string name="my_name">Чечуров Владимир Сергеевич БПИ2207</string>
     <string name="buttonShowText">Отобразить текст</string>
     <string name="editTextStr">Введите текст</string>
     <string name="textInputButtonContenr">Перейти на следующую страницу</string>
-    <string name="buttonToMainS">Вернуться на главный экран</string>
+    <string name="buttonToMainS">В главное меню</string>
     <string name="textViewAct2">Activity 2 \n На предыдущей странице вы ввели:</string>
+
+    <string name="settings">Настройки</string>
+    <string name="themes">Темы</string>
+    <string name="title_activity_setting_class">SettingClass</string>
+    <string name="title_activity_setttings">SetttingsActivity</string>
 </resources>

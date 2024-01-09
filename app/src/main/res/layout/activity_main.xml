@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsButton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -20,36 +21,31 @@
 
     <Button
         android:id="@+id/mainButton"
-        android:layout_width="215dp"
-        android:layout_height="82dp"
+        style="@style/BlueStartButton"
+        android:layout_width="224dp"
+        android:layout_height="62dp"
         android:text="@string/textInputButtonContenr"
+        android:textAppearance="@style/BlueStartButton"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802" />
+        app:layout_constraintVertical_bias="0.802"
+        tools:ignore="TextSizeCheck" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="255dp"
-        android:layout_height="86dp"
-        app:counterEnabled="true"
+    <Button
+        android:id="@+id/button"
+        style="@style/BlueStartButton"
+        android:layout_width="219dp"
+        android:layout_height="63dp"
+        android:text="@string/settings"
+        android:textAppearance="@style/BlueStartButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537"
-        app:passwordToggleEnabled="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alpha="1"
-            android:background="#FFFFFF"
-            android:hint="@string/editTextStr"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintVertical_bias="0.651" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

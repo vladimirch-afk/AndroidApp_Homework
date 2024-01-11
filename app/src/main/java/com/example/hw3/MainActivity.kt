@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+
 
 class MainActivity : Activity() {
     private var textViewName: TextView? = null
@@ -66,7 +68,7 @@ class MainActivity : Activity() {
     }
 
     private fun openTextEdit() {
-        val intent = Intent(this, TextInput::class.java).apply {
+        val intent = Intent(this, ListActivity::class.java).apply {
             putExtra("Theme_type", intent.getIntExtra("Theme_type", 0))
         }
         startActivity(intent)

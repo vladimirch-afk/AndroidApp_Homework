@@ -12,4 +12,6 @@
     <string name="themes">Темы</string>
     <string name="title_activity_setting_class">SettingClass</string>
     <string name="title_activity_setttings">SetttingsActivity</string>
+
+    <string name="list_activity">Список</string>
 </resources>

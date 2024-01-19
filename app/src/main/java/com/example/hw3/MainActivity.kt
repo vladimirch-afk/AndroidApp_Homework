@@ -3,6 +3,7 @@ package com.example.hw3
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -12,48 +13,25 @@ class MainActivity : Activity() {
     private var textViewName: TextView? = null
     private var button: Button? = null
     private var buttonSettings: Button? = null
+    private var buttonMaps: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme()
         textViewName = findViewById(R.id.name)
-        //editText = findViewById<EditText>(R.id.editTextField)
         button = findViewById(R.id.mainButton)
         buttonSettings = findViewById(R.id.button)
+        buttonMaps = findViewById(R.id.mapButton)
         button!!.setOnClickListener {
             openTextEdit()
         }
         buttonSettings!!.setOnClickListener {
             openSettings()
         }
-        /*val thread = Thread {
-            var acc = -0.2f
-            var vel = 2f
-            val offsetY = textViewName!!.translationY
-            while (true) {
-                textViewName!!.translationY = textViewName!!.translationY + vel
-                vel += acc
-                if (textViewName!!.translationY > offsetY) {
-                    acc = -0.2f
-                }
-                if (textViewName!!.translationY >= offsetY + 30) {
-                    vel = -2f
-                    textViewName!!.translationY = offsetY + 30
-                }
-                if (textViewName!!.translationY < offsetY) {
-                    acc = 0.2f
-                }
-                if (textViewName!!.translationY < offsetY - 30) {
-                    vel = 2f
-                    textViewName!!.translationY = offsetY - 30
-                }
-                try {
-                    Thread.sleep(20)
-                } catch (e: Exception) {
-                    throw RuntimeException()
-                }
-            }
+        buttonMaps!!.setOnClickListener {
+            openMaps()
         }
-        thread.start()*/
+        val animation = AnimationUtils.loadAnimation(this, R.anim.tween_anim)
+        textViewName!!.setOnClickListener { textViewName?.startAnimation(animation) }
     }
 
 
@@ -80,4 +58,12 @@ class MainActivity : Activity() {
         }
         startActivity(intent)
     }
+
+    private fun openMaps() {
+        val intent = Intent(this, MapsActivity::class.java).apply {
+            putExtra("Theme_type", intent.getIntExtra("Theme_type", 0))
+        }
+        startActivity(intent)
+    }
+
 }

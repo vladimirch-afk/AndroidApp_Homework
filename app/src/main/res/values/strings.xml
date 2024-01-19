@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HW3</string>
     <string name="empty_string"></string>
-    <string name="my_name">Чечуров Владимир Сергеевич БПИ2207</string>
+    <string name="my_name">Чечуров Владимир Сергеевич БПИ227</string>
     <string name="buttonShowText">Отобразить текст</string>
     <string name="editTextStr">Введите текст</string>
     <string name="textInputButtonContenr">Перейти на следующую страницу</string>
@@ -14,4 +14,11 @@
     <string name="title_activity_setttings">SetttingsActivity</string>
 
     <string name="list_activity">Список</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+
+    <string name="mapStr">Карта</string>
+
 </resources>
